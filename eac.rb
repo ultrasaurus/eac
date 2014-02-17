@@ -6,9 +6,8 @@ module EAC
   class << self
     def parse(content)
       xml_doc = Nokogiri::XML(content)
-      namespaces = xml_doc.collect_namespaces
       entity_types = xml_doc.xpath("//ns:cpfDescription/ns:identity/ns:entityType", 
-                                   ns:namespaces['xmlns'])
+                                   ns:'urn:isbn:1-931666-33-4')
       if entity_types.nil? || entity_types.length < 1                             
         raise ArgumentError.new("entityType not found")
       end
