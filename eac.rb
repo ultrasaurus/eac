@@ -31,7 +31,36 @@ module EAC
   end
 
   class Person < Doc
+    def initialize(xml_doc)
+      super
+    end
 
+    def names
+      if @names.nil?
+         @names = names_from_entries
+      end
+      @names
+    end
+
+    def names_from_entries
+      name_elements = []
+      name_entries = @xml.xpath("//ns:cpfDescription/ns:identity/ns:nameEntry",
+                                    ns:'urn:isbn:1-931666-33-4')
+      name_entries.each do |entry|
+        name_elements << Name.new(entry)
+      end
+      name_elements
+    end
+
+    class Name
+      attr_reader :parts
+
+      def initialize(xml)
+        @parts = xml.xpath('ns:part', ns:'urn:isbn:1-931666-33-4')
+
+      end
+
+    end
   end
 
 end

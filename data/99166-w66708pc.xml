@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?><eac-cpf xmlns="urn:isbn:1-931666-33-4" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink"><control><recordId>http://n2t.net/ark:/99166/w66708pc</recordId><otherRecordId localType="http://socialarchive.iath.virginia.edu/control/term#MergedRecord">WHi-122416089.r05</otherRecordId><otherRecordId localType="http://socialarchive.iath.virginia.edu/control/term#MergedRecord">OCLC-LAF-15365373.c</otherRecordId><otherRecordId localType="http://viaf.org/viaf/terms#viafID">70573852</otherRecordId><maintenanceStatus>revised</maintenanceStatus><maintenanceAgency>
+                     <agencyName>SNAC: Social Networks and Archival Context Project</agencyName>
+                </maintenanceAgency><languageDeclaration>
+                <language languageCode="eng">English</language>
+                <script scriptCode="Latn">Latin Alphabet</script>
+                </languageDeclaration><conventionDeclaration><citation>VIAF</citation></conventionDeclaration><maintenanceHistory>
+                <maintenanceEvent>
+                <eventType>revised</eventType>
+                <eventDateTime>2013-10-19</eventDateTime> 
+                <agentType>machine</agentType>
+                <agent>CPF merge program</agent>
+                <eventDescription>Merge v2.0</eventDescription>
+                </maintenanceEvent>
+                </maintenanceHistory><sources>
+         <source xlink:href="http://www.worldcat.org/oclc/122416089" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      
+         <source xlink:href="http://www.worldcat.org/oclc/15365373" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <source xlink:href="http://viaf.org/viaf/70573852" xlink:type="simple"/></sources></control><cpfDescription><identity><entityType>person</entityType><nameEntry xml:lang="en-Latn">
+            <part>Gorman, Arthur D.</part>
+            <authorizedForm>WorldCat</authorizedForm>
+         </nameEntry><nameEntry xml:lang="en-Latn">
+            <part>Gorman, Arthur.</part>
+            <authorizedForm>WorldCat</authorizedForm>
+         </nameEntry><nameEntry localType="http://viaf.org/viaf/terms#mainHeadings/data/text"><part>Gorman, Arthur Daniel, 1946-</part><authorizedForm>VIAF</authorizedForm></nameEntry></identity><description><existDates><dateRange><fromDate localType="http://socialarchive.iath.virginia.edu/control/term#Birth" standardDate="1946">1946</fromDate></dateRange></existDates></description><relations><cpfRelation xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#associatedWith" xlink:href="http://n2t.net/ark:/99166/w62v8cz6" xlink:role="http://socialarchive.iath.virginia.edu/control/term#CorporateBody" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <relationEntry>Committee for Miners.</relationEntry>
+            
+         </cpfRelation><cpfRelation xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#associatedWith" xlink:href="http://n2t.net/ark:/99166/w6100wv3" xlink:role="http://socialarchive.iath.virginia.edu/control/term#Person" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <relationEntry>Ivanova, Petya N.</relationEntry>
+            
+         </cpfRelation><cpfRelation xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#associatedWith" xlink:href="http://n2t.net/ark:/99166/w600568s" xlink:role="http://socialarchive.iath.virginia.edu/control/term#CorporateBody" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <relationEntry>Lafayette College (Easton, Pa.). Faculty.</relationEntry>
+            
+         </cpfRelation><cpfRelation xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#sameAs" xlink:href="http://viaf.org/viaf/70573852" xlink:role="http://socialarchive.iath.virginia.edu/control/term#Person" xlink:type="simple"><relationEntry>Gorman, Arthur Daniel, 1946-</relationEntry></cpfRelation><cpfRelation xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#sameAs" xlink:href="http://www.worldcat.org/wcidentities/lccn-n91-085172" xlink:role="http://socialarchive.iath.virginia.edu/control/term#Person" xlink:type="simple"/><cpfRelation xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#sameAs" xlink:href="http://id.loc.gov/authorities/names/n91085172" xlink:role="http://socialarchive.iath.virginia.edu/control/term#Person" xlink:type="simple"/><resourceRelation xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#referencedIn" xlink:href="http://www.worldcat.org/oclc/122416089" xlink:role="http://socialarchive.iath.virginia.edu/control/term#ArchivalResource" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <relationEntry>Committee for Miners. Records, 1963-1965.</relationEntry>
+            <objectXMLWrap>
+               <mods xmlns="http://www.loc.gov/mods/v3">
+                  <recordInfo>
+                     <recordOrigin>WorldCat:122416089</recordOrigin>
+                     <recordContentSource>ISIL:WHi</recordContentSource>
+                  </recordInfo>
+                  <name>
+                     <namePart>Committee for Miners.</namePart>
+                     <role>
+                        <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">Creator</roleTerm>
+                     </role>
+                  </name>
+                  <name>
+                     <namePart>Wiley, Peter B.</namePart>
+                     <role>
+                        <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">Creator</roleTerm>
+                     </role>
+                  </name>
+                  <titleInfo>
+                     <title>Records, 1963-1965.</title>
+                  </titleInfo>
+                  <abstract>Records of an organization formed to raise funds for legal and economic assistance to unemployed miners in eastern Kentucky, together with related personal papers of Peter B. Wiley, a field worker for CFM. </abstract>
+                  <name>
+                     <namePart>Unknown</namePart>
+                     <role>
+                        <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/rps">Repository</roleTerm>
+                     </role>
+                  </name>
+               </mods>
+            </objectXMLWrap>
+            <descriptiveNote>
+               <p>
+                  <span localType="http://socialarchive.iath.virginia.edu/control/term#Leader06">p</span>
+                  <span localType="http://socialarchive.iath.virginia.edu/control/term#Leader07">c</span>
+                  <span localType="http://socialarchive.iath.virginia.edu/control/term#Leader08">a</span>
+               </p>
+            </descriptiveNote>
+         </resourceRelation><resourceRelation xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#creatorOf" xlink:href="http://www.worldcat.org/oclc/15365373" xlink:role="http://socialarchive.iath.virginia.edu/control/term#ArchivalResource" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <relationEntry>Gorman, Arthur D. [Articles, book reviews, etc.].</relationEntry>
+            <objectXMLWrap>
+               <mods xmlns="http://www.loc.gov/mods/v3">
+                  <recordInfo>
+                     <recordOrigin>WorldCat:15365373</recordOrigin>
+                     <recordContentSource>ISIL:OCLC-LAF</recordContentSource>
+                  </recordInfo>
+                  <name>
+                     <namePart>Gorman, Arthur D.</namePart>
+                     <role>
+                        <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">Creator</roleTerm>
+                     </role>
+                  </name>
+                  <name>
+                     <namePart>Ivanova, Petya N.</namePart>
+                     <role>
+                        <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">Creator</roleTerm>
+                     </role>
+                  </name>
+                  <name>
+                     <namePart>Lafayette College (Easton, Pa.). Faculty.</namePart>
+                     <role>
+                        <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">Creator</roleTerm>
+                     </role>
+                  </name>
+                  <titleInfo>
+                     <title>[Articles, book reviews, etc.]. 1981-</title>
+                  </titleInfo>
+                  <name>
+                     <namePart>Lafayette College</namePart>
+                     <role>
+                        <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/rps">Repository</roleTerm>
+                     </role>
+                  </name>
+               </mods>
+            </objectXMLWrap>
+            <descriptiveNote>
+               <p>
+                  <span localType="http://socialarchive.iath.virginia.edu/control/term#Leader06">a</span>
+                  <span localType="http://socialarchive.iath.virginia.edu/control/term#Leader07">c</span>
+                  <span localType="http://socialarchive.iath.virginia.edu/control/term#Leader08"> </span>
+               </p>
+            </descriptiveNote>
+         </resourceRelation><resourceRelation xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#creatorOf" xlink:role="http://socialarchive.iath.virginia.edu/control/term#BibliographicResource" xlink:type="simple"><relationEntry>Waves, caustics, and Thom's theorem, 1980</relationEntry></resourceRelation></relations></cpfDescription></eac-cpf>

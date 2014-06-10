@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://socialarchive.iath.virginia.edu/shared/cpf.rng" type="xml"?>
+<eac-cpf xmlns="urn:isbn:1-931666-33-4">
+   <control>
+      <recordId>rid_331_pid_EACP328.c</recordId>
+      <maintenanceStatus>new</maintenanceStatus>
+      <maintenanceAgency>
+         <agencyName>SNAC: Social Networks and Archival Context Project</agencyName>
+      </maintenanceAgency>
+      <languageDeclaration>
+         <language languageCode="eng">English</language>
+         <script scriptCode="Latn">Latin</script>
+      </languageDeclaration>
+      <maintenanceHistory>
+         <maintenanceEvent>
+            <eventType>created</eventType>
+            <eventDateTime standardDateTime="2013-10-29T16:16:08.385-04:00"/>
+            <agentType>machine</agentType>
+            <agent>XSLT field_books2cpf.xsl Saxonica 2.0 http://www.saxonica.com/</agent>
+            <eventDescription>Derived from SIA fieldbook expedition, person, and organization records</eventDescription>
+         </maintenanceEvent>
+      </maintenanceHistory>
+      <sources>
+         <source xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xlink:href="http://siarchives.si.edu/fieldbooks/placeholder/rid_331_pid_EACP328"
+                 xlink:type="simple">
+            <objectXMLWrap>
+               <orig>
+                  <orig>
+                     <ROW xmlns="http://www.filemaker.com/fmpdsoresult" MODID="11" RECORDID="331">
+                        <p_maintenance_history_agent>HunterEJ</p_maintenance_history_agent>
+                        <p_maintenance_agency>Smithsonian Institution Archives</p_maintenance_agency>
+                        <p_eventDateTime1>1/23/2012</p_eventDateTime1>
+                        <p_eventDateTimet2>5/31/2013</p_eventDateTimet2>
+                        <p_eventDateTime3/>
+                        <personID>EACP328</personID>
+                        <p_lastname>Gorman</p_lastname>
+                        <p_firstname>Martin</p_firstname>
+                        <p_middle_initial>W.</p_middle_initial>
+                        <p_exist_date_b>1853</p_exist_date_b>
+                        <p_exist_date_d>1926</p_exist_date_d>
+                        <p_address1/>
+                        <p_address2/>
+                        <p_city/>
+                        <p_state/>
+                        <p_postalcode/>
+                        <p_country/>
+                        <p_URL/>
+                        <p_phone/>
+                        <p_email_address/>
+                        <p_occupation>
+                           <DATA>Botanists</DATA>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                        </p_occupation>
+                        <p_bio_history>Martin W. Gorman was a botanist, specializing in trees and other flora of the Pacific Northwest United States. He was born on November 23, 1853 in Eaganville, Renfrew County, Ontario, Canada. He enrolled at McGill College in Montreal in 1876. In February 1885 Gorman moved to Portland, Oregon where he worked as a bookkeeper at a bank. According to a letter written to his brother, Gorman took up an interest in botany. During his trip to the Yukon Territory in 1893 on behalf of the bank he worked for, he gathered several boxes of plant specimens, and began his career as a botanist.
+Over the next few years, Gorman traveled to the Yukon on numerous occasions as part of various expeditions. He conducted extensive botanical work in the Pacific Northwest, focusing a great deal on local trees. He collected across Oregon and Washington, including an expedition to Mount Baker in 1906, and later published a booklet concerning the trip titled, Vegetation of the Northwestern Slope of Mount Baker. 
+Gorman was appointed curator of the Oregon Forestry Building, where he worked until his death in Portland, Oregon, on October 7, 1926. A large number of his collected specimens now reside at the Smithsonian Institution and the University of Oregon Herbarium. His personal collection was acquired by the University of Oregon following his death. Gorman is credited with discovering at least 10 new species.
+</p_bio_history>
+                        <p_primary_name>Gorman, Martin W.</p_primary_name>
+                        <p_alt_name1>Gorman, M. W.</p_alt_name1>
+                        <p_alt_name2>Gorman, Martin Woodcock</p_alt_name2>
+                        <p_alt_name3/>
+                        <p_language1>English</p_language1>
+                        <p_language1_code>eng</p_language1_code>
+                        <p_language1_script>Latin</p_language1_script>
+                        <p_language1_script_code>Latn</p_language1_script_code>
+                        <p_language2/>
+                        <p_language2_code/>
+                        <p_language2_script/>
+                        <p_language2_script_code/>
+                        <p_language3/>
+                        <p_language3_code/>
+                        <p_language3_script/>
+                        <p_language3_script_code/>
+                        <p_related_material>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                        </p_related_material>
+                        <p_related_entity1/>
+                        <p_related_entity1_description/>
+                        <p_related_entity2_description/>
+                        <p_related_entity3_description/>
+                        <p_related_entity2/>
+                        <p_related_entity3/>
+                        <p_source>
+                           <DATA>Murrill, W. A. (1902). Shorter notes. Torreya, 2(2), 25-26.</DATA>
+                           <DATA/>
+                           <DATA/>
+                        </p_source>
+                        <p_maintenanceStatus>new</p_maintenanceStatus>
+                        <p_publicationStatus>inProcess</p_publicationStatus>
+                        <p_resource_relation>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                           <DATA/>
+                        </p_resource_relation>
+                     </ROW>
+                  </orig>
+               </orig>
+            </objectXMLWrap>
+         </source>
+      </sources>
+   </control>
+   <cpfDescription>
+      <identity>
+         <entityType>person</entityType>
+         <nameEntry xml:lang="en-Latn">
+            <part>Gorman, Martin W., 1853-1926</part>
+            <authorizedForm>SIA</authorizedForm>
+         </nameEntry>
+         <nameEntry xml:lang="en-Latn">
+            <part>Gorman, M. W., 1853-1926</part>
+            <alternativeForm>SIA</alternativeForm>
+         </nameEntry>
+         <nameEntry xml:lang="en-Latn">
+            <part>Gorman, Martin Woodcock, 1853-1926</part>
+            <alternativeForm>SIA</alternativeForm>
+         </nameEntry>
+      </identity>
+      <description>
+         <existDates>
+            <dateRange>
+               <fromDate standardDate="1853"
+                         localType="http://socialarchive.iath.virginia.edu/control/term#Birth">1853</fromDate>
+               <toDate standardDate="1926"
+                       localType="http://socialarchive.iath.virginia.edu/control/term#Death">1926</toDate>
+            </dateRange>
+         </existDates>
+         <occupation>
+            <term>Botanists</term>
+         </occupation>  
+         <languageUsed>
+            <language languageCode="eng">English</language>
+            <script scriptCode="Latn">Latin</script>
+         </languageUsed>
+         <biogHist>
+            <p>Martin W. Gorman was a botanist, specializing in trees and other flora of the Pacific Northwest United States. He was born on November 23, 1853 in Eaganville, Renfrew County, Ontario, Canada. He enrolled at McGill College in Montreal in 1876. In February 1885 Gorman moved to Portland, Oregon where he worked as a bookkeeper at a bank. According to a letter written to his brother, Gorman took up an interest in botany. During his trip to the Yukon Territory in 1893 on behalf of the bank he worked for, he gathered several boxes of plant specimens, and began his career as a botanist. Over the next few years, Gorman traveled to the Yukon on numerous occasions as part of various expeditions. He conducted extensive botanical work in the Pacific Northwest, focusing a great deal on local trees. He collected across Oregon and Washington, including an expedition to Mount Baker in 1906, and later published a booklet concerning the trip titled, Vegetation of the Northwestern Slope of Mount Baker. Gorman was appointed curator of the Oregon Forestry Building, where he worked until his death in Portland, Oregon, on October 7, 1926. A large number of his collected specimens now reside at the Smithsonian Institution and the University of Oregon Herbarium. His personal collection was acquired by the University of Oregon following his death. Gorman is credited with discovering at least 10 new species.</p>
+            <citation>Smithsonian Insitution Archives Field Book Project: Person : Description : rid_331_pid_EACP328</citation>
+         </biogHist>
+      </description>
+      <relations>
+         <resourceRelation xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:arcrole="http://socialarchive.iath.virginia.edu/control/term#creatorOf"
+                           xlink:role="http://socialarchive.iath.virginia.edu/control/term#ArchivalResource"
+                           xlink:type="simple"
+                           xlink:href="http://siarchives.si.edu/fieldbooks/placeholder/rid_331_pid_EACP328">
+            <relationEntry>Gorman, Martin W., 1853-1926</relationEntry>
+         </resourceRelation>
+      </relations>
+   </cpfDescription>
+</eac-cpf>
