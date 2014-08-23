@@ -1,4 +1,4 @@
-require './eac'
+require './lib/eac'
 
 describe EAC do
   context "reads file" do
@@ -26,7 +26,6 @@ describe EAC do
     end
   end
 
-
   context "Person create" do
     let(:person) do
       person = nil
@@ -34,6 +33,12 @@ describe EAC do
         person = EAC(f)
       end
       person
+    end
+
+    describe "attributes" do
+      it "should have 'record_id'" do
+        expect(person.record_id).to eq("RU007004")
+      end
     end
 
     describe "with name" do

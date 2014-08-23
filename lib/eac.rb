@@ -31,8 +31,12 @@ module EAC
   end
 
   class Person < Doc
+    attr_reader :record_id
     def initialize(xml_doc)
       super
+      @record_id = xml_doc.xpath("//ns:control/ns:recordId",
+                                ns:'urn:isbn:1-931666-33-4').text
+
     end
 
     def names
