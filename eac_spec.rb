@@ -65,4 +65,24 @@ describe EAC do
     end
   end
 
+  context "EAC::Person::Name" do
+    let (:name1_part1_text) { "Walcott, Charles D. (Charles Doolittle), 1850-1927" }
+    let(:name1_entry_xml) do
+      s = "<nameEntry xmlns='urn:isbn:1-931666-33-4' scriptCode='Latn' xml:lang='eng'>
+            <part>#{name1_part1_text}</part>
+            <authorizedForm>LCNAF</authorizedForm>
+          </nameEntry>"
+      Nokogiri::XML(s)
+    end
+
+    it "has parts" do
+      EAC::Person::Name.new(name1_entry_xml).parts.length.should == 1
+    end
+
+    it "parts have string representation" do
+      EAC::Person::Name.new(name1_entry_xml).parts.first.to_s.should == name1_part1_text
+    end
+
+  end
+
 end
