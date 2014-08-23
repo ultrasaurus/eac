@@ -53,23 +53,28 @@ module EAC
     end
 
     class Name
+      attr_reader :parts
 
       def initialize(xml)
-        @parts_xml = xml.xpath('ns:nameEntry/ns:part', ns:'urn:isbn:1-931666-33-4')
-        #xml_parts.each do |part_data|
-        #  @parts << Part.new(part_data)
-        #end
+        @parts = []
+        xml_parts = xml.xpath('ns:part', ns:'urn:isbn:1-931666-33-4')
+        xml_parts.each do |part_data|
+          @parts << Part.new(part_data)
+        end
       end
 
       def to_s
-        @parts_xml.map(&:text).join(', ')
+        @parts.map(&:text).join(', ')
       end
 
-      #class Part
-      #  def initialize(xml)
-      #    @text = xml.text
-      #  end
-      #end
+      class Part
+        attr_reader :local_type, :text
+
+        def initialize(xml)
+          @local_type = xml['localType']
+          @text = xml.text
+        end
+      end
 
     end
   end

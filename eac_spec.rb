@@ -1,12 +1,21 @@
 require './eac'
 
 describe EAC do
-  it "reads file" do
-    pending "non-person file"
-    File.open("./data/sia_walcott.xml") do |f|
-      eac = EAC(f)
-      eac.class.should eq(EAC::Doc)
+  context "reads file" do
+    it "using EAC shorcut" do
+      File.open("./data/sia_walcott.xml") do |f|
+        eac = EAC(f)
+        eac.should be_a(EAC::Person)
+      end
     end
+
+    it "using EAC::Doc.new" do
+      File.open("./data/sia_walcott.xml") do |f|
+        eac = EAC::Doc.new(f)
+        eac.should be_a(EAC::Doc)
+      end
+    end
+
   end
 
   context "with invalid data" do
@@ -16,26 +25,15 @@ describe EAC do
       }.to raise_error(ArgumentError, "entityType not found")
     end
   end
-  
-  context "Doc create" do
-    it "reads file" do
-      File.open("./data/sia_walcott.xml") do |f|
-        eac = EAC::Doc.new(f)
-        eac.class.should eq(EAC::Doc)
-      end
-    end
-  end
+
 
   context "Person create" do
-   let(:person) do
+    let(:person) do
       person = nil
       File.open("./data/sia_walcott.xml") do |f|
         person = EAC(f)
       end
       person
-   end
-    it "generates EAC::Person class" do
-        person.class.should eq(EAC::Person)    
     end
 
     describe "with name" do
@@ -44,11 +42,20 @@ describe EAC do
       end
 
       describe "parts" do
-        it "parses one" do
-          person.names.first.parts.length == 1
+        it "handles a name entry with only one part" do
+          single_part_name = person.names.first
+          parts = single_part_name.parts
+          expect(parts.length).to eq(1)
+          expect(parts[0].local_type).to be_nil
+          expect(parts[0].text).to eq("Walcott, Charles D. (Charles Doolittle), 1850-1927")
         end
-        it "handles multiple" do
-          person.names[1].parts.length == 3
+
+        it "handles a name entry with multiple parts" do
+          multipart_name = person.names[1]
+          expect(multipart_name.parts.length).to eq(3)
+
+          expect(multipart_name.parts[0].local_type).to eq("surname")
+          expect(multipart_name.parts[0].text).to eq("Walcott")
         end
       end
 
@@ -64,25 +71,4 @@ describe EAC do
 
     end
   end
-
-  context "EAC::Person::Name" do
-    let (:name1_part1_text) { "Walcott, Charles D. (Charles Doolittle), 1850-1927" }
-    let(:name1_entry_xml) do
-      s = "<nameEntry xmlns='urn:isbn:1-931666-33-4' scriptCode='Latn' xml:lang='eng'>
-            <part>#{name1_part1_text}</part>
-            <authorizedForm>LCNAF</authorizedForm>
-          </nameEntry>"
-      Nokogiri::XML(s)
-    end
-
-    it "has parts" do
-      EAC::Person::Name.new(name1_entry_xml).parts.length.should == 1
-    end
-
-    it "parts have string representation" do
-      EAC::Person::Name.new(name1_entry_xml).parts.first.to_s.should == name1_part1_text
-    end
-
-  end
-
 end
