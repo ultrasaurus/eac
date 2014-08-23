@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'nokogiri'
-gem 'rspec', :require => false
+# Specify your gem's dependencies in eac.gemspec
+gemspec
