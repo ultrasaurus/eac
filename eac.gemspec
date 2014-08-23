@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Sarah Allen", "Sarah Mei"]
   spec.email         = ["sarah@ultrasaurus.com", "sarahmei@gmail.com"]
   spec.summary       = %q{Enables parsing of EAC-CPF (Encoded Archival Context - Corporate Bodies, Persons, and Families) files. }
-  spec.description   = %q{The initial focus is to read EAC-CPF files that represent an individual person, which will have a <cpfDescription> node.  The <cpfDescription> (Corporate body, person or family description) contains information on the name structures, descriptive elements, and relationships.}
+  spec.description   = %q{The initial focus is to read EAC-CPF files that represent an individual person, which will have a 'cpfDescription' node.  The 'cpfDescription' (Corporate body, person or family description) contains information on the name structures, descriptive elements, and relationships.}
   spec.homepage      = "https://github.com/ultrasaurus/eac"
   spec.license       = "MIT"
 
