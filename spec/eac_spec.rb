@@ -3,17 +3,13 @@ require './lib/eac'
 describe EAC do
   context "reads file" do
     it "using EAC shorcut" do
-      File.open("./data/sia_walcott.xml") do |f|
-        eac = EAC(f)
-        eac.should be_a(EAC::Person)
-      end
+      eac = EAC(File.read("./data/sia_walcott.xml"))
+      eac.should be_a(EAC::Person)
     end
 
     it "using EAC::Doc.new" do
-      File.open("./data/sia_walcott.xml") do |f|
-        eac = EAC::Doc.new(f)
-        eac.should be_a(EAC::Doc)
-      end
+      eac = EAC::Doc.new(File.read("./data/sia_walcott.xml"))
+      eac.should be_a(EAC::Doc)
     end
 
   end
