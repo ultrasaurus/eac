@@ -41,19 +41,57 @@ module EAC
 
     def names
       if @names.nil?
-         @names = names_from_entries
+        @names = []
+        name_entries = @xml.xpath("//ns:cpfDescription/ns:identity/ns:nameEntry",
+                                  ns:'urn:isbn:1-931666-33-4')
+        name_entries.each do |entry|
+          @names << Name.new(entry)
+        end
       end
       @names
     end
 
-    def names_from_entries
-      name_elements = []
-      name_entries = @xml.xpath("//ns:cpfDescription/ns:identity/ns:nameEntry",
-                                    ns:'urn:isbn:1-931666-33-4')
-      name_entries.each do |entry|
-        name_elements << Name.new(entry)
+    def occupations
+      if @occupations.nil?
+        @occupations = @xml.xpath("//ns:occupations/ns:occupation/ns:term",
+                                  ns:'urn:isbn:1-931666-33-4').map(&:text)
       end
-      name_elements
+      @occupations
+    end
+
+    def biography
+      if @biography.nil?
+        @biography = Biography.new(@xml)
+      end
+    @biography
+    end
+
+    class Biography
+      attr_reader :notes, :abstract, :chronology
+      def initialize(xml)
+        @notes = xml.xpath('//ns:biogHist/ns:p', ns:'urn:isbn:1-931666-33-4').map(&:text)
+
+        xml_result = xml.xpath('//ns:biogHist/ns:abstract', ns:'urn:isbn:1-931666-33-4')
+        if xml_result.empty?
+          @abstract = ""
+        else
+          @abstract = xml_result.map(&:text).join('\n')
+        end
+
+        chron_data = xml.xpath('.//ns:biogHist/ns:chronList/ns:chronItem', ns:'urn:isbn:1-931666-33-4')
+        puts "-"*80
+        puts chron_data.inspect
+        @chronology = []
+        chron_data.each do |item|
+          puts item.inspect
+          @chronology << Event.new #(item)
+        end
+
+      end
+    end
+
+    class Event
+      #item.xpath('ns:date', ns:'urn:isbn:1-931666-33-4')
     end
 
     class Name
@@ -82,6 +120,7 @@ module EAC
 
     end
   end
+
 
 end
 
