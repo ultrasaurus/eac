@@ -31,9 +31,34 @@ describe EAC do
       person
     end
 
+    let (:cadell) { EAC(File.read("./data/yale_cadell.xml"))}
+
     describe "attributes" do
       it "should have 'record_id'" do
         expect(person.record_id).to eq("RU007004")
+      end
+
+      it "should have occupations" do
+        expect(person.occupations).to eq(["Paleontologist", "Geologist", "Acting Secretary in Charge of the United States National Museum", "Secretary, Smithsonian Institution"])
+      end
+      it "should have biography data" do
+      end
+    end
+
+    context "biography" do
+       context "abstract" do
+         it "should be nil if no abstract present" do
+           expect(person.biography.abstract).to eq('')
+         end
+         it "should have text if abstract present" do
+           expect(cadell.biography.abstract).to include("Thomas Cadell was born in Bristol")
+         end
+       end
+      context "notes" do
+        it "should have an array of strings with content from file" do
+          expect(person.biography.notes.length).to eq(7)
+          expect(person.biography.notes[1]).to include("Walcott was appointed Secretary of the Smithsonian")
+        end
       end
     end
 

@@ -2,13 +2,13 @@
 require 'nokogiri'
 
 module EAC
-  
+
   class << self
     def parse(content)
       xml_doc = Nokogiri::XML(content)
-      entity_types = xml_doc.xpath("//ns:cpfDescription/ns:identity/ns:entityType", 
+      entity_types = xml_doc.xpath("//ns:cpfDescription/ns:identity/ns:entityType",
                                    ns:'urn:isbn:1-931666-33-4')
-      if entity_types.nil? || entity_types.length < 1                             
+      if entity_types.nil? || entity_types.length < 1
         raise ArgumentError.new("entityType not found")
       end
       if entity_types.length > 1
@@ -26,7 +26,7 @@ module EAC
 
   class Doc
     def initialize(xml_doc)
-      @xml = xml_doc  
+      @xml = xml_doc
     end
   end
 
@@ -41,19 +41,48 @@ module EAC
 
     def names
       if @names.nil?
-         @names = names_from_entries
+        @names = []
+        name_entries = @xml.xpath("//ns:cpfDescription/ns:identity/ns:nameEntry",
+                                  ns:'urn:isbn:1-931666-33-4')
+        name_entries.each do |entry|
+          @names << Name.new(entry)
+        end
       end
       @names
     end
 
-    def names_from_entries
-      name_elements = []
-      name_entries = @xml.xpath("//ns:cpfDescription/ns:identity/ns:nameEntry",
-                                    ns:'urn:isbn:1-931666-33-4')
-      name_entries.each do |entry|
-        name_elements << Name.new(entry)
+    def occupations
+      if @occupations.nil?
+        @occupations = @xml.xpath("//ns:occupations/ns:occupation/ns:term",
+                                  ns:'urn:isbn:1-931666-33-4').map(&:text)
       end
-      name_elements
+      @occupations
+    end
+
+    def biography
+      if @biography.nil?
+        @biography = Biography.new(@xml)
+      end
+    @biography
+    end
+
+    class Biography
+      attr_reader :notes, :abstract
+      def initialize(xml)
+        @notes = xml.xpath('//ns:biogHist/ns:p', ns:'urn:isbn:1-931666-33-4').map(&:text)
+
+        xml_result = xml.xpath('//ns:biogHist/ns:abstract', ns:'urn:isbn:1-931666-33-4')
+        if xml_result.empty?
+          @abstract = ""
+        else
+          @abstract = xml_result.map(&:text).join('\n')
+        end
+
+      end
+    end
+
+    class Event
+      #item.xpath('ns:date', ns:'urn:isbn:1-931666-33-4')
     end
 
     class Name
@@ -82,6 +111,7 @@ module EAC
 
     end
   end
+
 
 end
 
